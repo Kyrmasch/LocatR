@@ -16,22 +16,18 @@ namespace DI
 {
     public partial class _Default : Page
     {
-        private readonly IFigure _figure;
         private readonly ILocatR _locator;
-        public _Default(IFigure figure, ILocatR locator)
+        public _Default(ILocatR locator)
         {
-            _figure = figure;
             _locator = locator;
         }
 
         protected async void Page_Load(object sender, EventArgs e)
         {
-            string di = _figure.GetString();
-            
             await _locator.SendCommand(new WtiteEventCommand() { value = "MediatR" });
             string ass = await _locator.SendQuery<CopyFileCommand, string>(new CopyFileCommand() { size = 200 });
             
-            Injection.Text = $"{di} - {ass}";
+            Injection.Text = $"{ass}";
         }
     }
 }

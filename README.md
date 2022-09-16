@@ -33,6 +33,10 @@ The following code demonstrates basic usage.
 Add Global.asax.cs in Application_Start
 
 ```cs
+using Unity;
+using Unity.Injection;
+
+
 var container = this.AddUnity();
 container.RegisterType<ILocatR, LocatR.LocatR>(new InjectionConstructor(container));
 ```

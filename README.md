@@ -10,6 +10,8 @@ Supports request/response, commands, queries  synchronous and async with dispatc
 
 ### Installing LocatR
 
+:warning: **Important: Required NET.Framework 4.7.2 or later**
+
 You should install [LocatR with NuGet](https://www.nuget.org/packages/LocatR):
 
 ```sh

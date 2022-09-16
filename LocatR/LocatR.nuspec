@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <icon>icon.png</icon>
+    <description>$description$</description>
+    <copyright>$copyright$</copyright>
+    <tags>mediator request response queries commands</tags>
+    <repository type="git" url="https://github.com/Kyrmasch/LocatR.git" />
+  </metadata>
+  <files>
+    <file src="icon.png" />
+  </files>
+</package>

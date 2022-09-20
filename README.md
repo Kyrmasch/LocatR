@@ -10,6 +10,8 @@ Supports request/response, commands, queries  synchronous and async with dispatc
 
 ### Installing LocatR
 
+:warning: **Important: Required NET.Framework 4.7.2 or later**
+
 You should install [LocatR with NuGet](https://www.nuget.org/packages/LocatR):
 
 ```sh
@@ -31,6 +33,10 @@ The following code demonstrates basic usage.
 Add Global.asax.cs in Application_Start
 
 ```cs
+using Unity;
+using Unity.Injection;
+
+
 var container = this.AddUnity();
 container.RegisterType<ILocatR, LocatR.LocatR>(new InjectionConstructor(container));
 ```

@@ -10,10 +10,10 @@ using System.Configuration;
 using System.IO.Ports;
 using System.Reflection;
 using System.Security.Policy;
-using Unity;
 using System.ComponentModel;
 using Unity.Lifetime;
 using LocatR;
+using Microsoft.Practices.Unity;
 
 namespace LocatR
 {

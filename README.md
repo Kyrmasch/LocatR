@@ -16,7 +16,7 @@ You should install [LocatR with NuGet](https://www.nuget.org/packages/LocatR):
 
 ```sh
 Install-Package LocatR
-Install-Packag Microsoft.AspNet.WebFormsDependencyInjection.Unity
+Install-Package Unity.Mvc4
 ```
     
 

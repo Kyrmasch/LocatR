@@ -38,7 +38,7 @@ using Unity.Injection;
 
 
 var container = this.AddUnity();
-container.RegisterType<ILocatR, LocatR.LocatR>(new InjectionConstructor(container));
+container.RegisterType<ILocatR, LocatR.LocatR>(new InjectionConstructor(container, typeof(Startup).Assembly.GetTypes()));
 ```
 
 Create Example Command

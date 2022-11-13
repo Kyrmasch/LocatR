@@ -20,17 +20,17 @@ namespace LocatR
     public class LocatR : ILocatR
     {
         private readonly IUnityContainer _container;
-        public LocatR(IUnityContainer container)
+        public LocatR(IUnityContainer container, Type[] externalTypes)
         {
             _container = container;
 
-            var types = AppDomain.CurrentDomain.GetAssemblies().SelectMany(x => x.GetTypes())
-                .Where(p => p.GetInterfaces().Where(
+            var types = externalTypes
+                 .Where(mytype => mytype.GetInterfaces()
+                 .Where(
                         x => x.GetInterfaces().Any(
                             b => b == typeof(IBaseRequestHandler)
                             )
                         ).Any());
-
 
             var hendlers = types.Where(a => !a.IsAbstract && !a.IsInterface)                    
                     .Select(a => new { RType = a, RService = a.GetInterfaces().ToList() })
